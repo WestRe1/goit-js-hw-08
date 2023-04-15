@@ -25,8 +25,8 @@ function onSubmitForm(evt) {
   localStorage.removeItem('feedback-form-state');
   window.localStorage.clear();
   formData = {
-  email: actualObj.email ?? "",
-  message: actualObj.message ?? ""
+  email: "",
+  message: ""
   };
  
 };
