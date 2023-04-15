@@ -5,7 +5,7 @@ form.addEventListener('input', throttle(onFormData, 500));
 form.addEventListener('submit', onSubmitForm);
 
 
-const formData = {};
+let formData = {};
 
 function onFormData(evt) {
   formData[evt.target.name] = evt.target.value;
@@ -18,6 +18,7 @@ function onSubmitForm(evt) {
     evt.preventDefault();
   evt.currentTarget.reset();
   localStorage.removeItem('feedback-form-state');
+  formData = {};
 };
     
 (function dataFromLocalStorage() {
